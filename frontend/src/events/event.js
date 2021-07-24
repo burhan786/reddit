@@ -110,3 +110,24 @@ export const setComments = (comments) => {
     payload: comments,
   };
 };
+
+//login and toggle login
+export const loginUser = (userId) => {
+  return {
+    type: "LOG_USER_IN",
+    payload: userId,
+  };
+};
+
+export const logoutUser = (userId) => {
+  return {
+    type: "LOG_USER_OUT",
+    payload: userId,
+  };
+};
+
+export const toggleLoginUser = () => {
+  return {
+    type: "TOGGLE_LOGIN",
+  };
+};
