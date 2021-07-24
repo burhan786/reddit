@@ -52,3 +52,61 @@ export const setSinglePost = (post) => {
     payload: post,
   };
 };
+
+//search for posts
+
+export const searchPosts = (stringPost) => {
+  return {
+    type: "SEARCH_POST",
+    payload: stringPost,
+  };
+};
+
+//upvote and downvote single posts
+export const upvoteSinglePost = (id) => {
+  return {
+    type: "UPVOTE_POST",
+    payload: id,
+  };
+};
+
+export const downvoteSinglePost = (id) => {
+  return {
+    type: "DOWNVOTE_POST",
+    payload: id,
+  };
+};
+
+// Comments
+// 1. UpVote
+// 2. DownVote
+// 3. setComments
+// 4. Delete Comments
+
+export const upVoteComment = (commentId) => {
+  return {
+    type: "UPVOTE_COMMENT",
+    payload: commentId,
+  };
+};
+
+export const downVoteComment = (commentId) => {
+  return {
+    type: "DOWNVOTE_COMMENT",
+    payload: commentId,
+  };
+};
+
+export const deleteComment = (commentId) => {
+  return {
+    type: "DELETE_COMMENT",
+    payload: commentId,
+  };
+};
+
+export const setComments = (comments) => {
+  return {
+    type: "SET_COMMENTS",
+    payload: comments,
+  };
+};
